@@ -1,10 +1,10 @@
 # 🗓️ Cronograma de Estudos Semanal
-
-| Dia/Semana | Matéria 1            | Status ✅ | Matéria 2        | Status ✅ | Língua   | Status ✅ |
-|------------|----------------------|-----------|------------------|-----------|----------|-----------|
-| Segunda    | Infraestrutura       | [ ]       | Certificação     | [ ]       | Espanhol | [ ]       |
-| Terça      | Software Developer   | [ ]       | Business         | [ ]       | Inglês   | [ ]       |
-| Quarta     | Infraestrutura       | [ ]       | Certificação     | [ ]       | Espanhol | [ ]       |
-| Quinta     | Software Developer   | [ ]       | Business         | [ ]       | Inglês   | [ ]       |
-| Sexta      | Infraestrutura       | [ ]       | MBA Cloud        | [ ]       | Livre    | [ ]       |
-| Sábado     | Livre                | [ ]       | MBA Cloud        | [ ]       | Livre    | [ ]       |
+| Dia  | Golang | Certificação | Infra (1h) | Inglês (30min) | Espanhol (30min) |
+|------|--------|-------------|------------|----------------|------------------|
+| Dia 1 | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Dia 2 | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Dia 3 | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Dia 4 | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Dia 5 | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Dia 6 | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Dia 7 | [ ] | [ ] | [ ] | [ ] | [ ] |
