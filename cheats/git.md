@@ -1,4 +1,4 @@
-Aqui está um exemplo de arquivo `melhores-praticas-git.md` com as principais boas práticas para uso profissional do Git, incluindo convenções de commit, uso de branches e pull requests:
+Claro! Aqui está o arquivo `melhores-praticas-git.md` **atualizado** com a seção explicando **como fazer push para a nova branch, abrir um merge (pull) request e deletar a branch antiga** após o merge:
 
 ---
 
@@ -75,24 +75,88 @@ git rebase origin/main
 
 ## 🚀 6. Pull Requests
 
-* Abra um PR apenas quando a feature estiver pronta.
-* Faça *squash* de commits se necessário.
-* Solicite revisão de um colega.
-* Escreva uma descrição clara no PR (o que foi feito, como testar, etc).
-* Nunca faça merge com erros de CI/CD.
+* Faça push da branch para o GitHub:
+
+  ```bash
+  git push origin feature/nome-da-feature
+  ```
+
+* No GitHub, crie um **Pull Request**:
+
+  * Compare `feature/nome-da-feature` com `main`
+  * Escreva um título claro e uma descrição com:
+
+    * O que foi feito
+    * Como testar
+    * Qual problema resolve
+
+* Aguarde a revisão de outro membro da equipe.
+
+* Após aprovação e sucesso do CI/CD, **faça o merge no GitHub** (preferencialmente com `Squash and merge`).
 
 ---
 
-## 🧽 7. Limpeza
+## 🧽 7. Limpeza após o Merge
 
-Após merge:
+Depois que o PR for aceito e a branch mergeada:
 
 ```bash
 git checkout main
 git pull origin main
-git branch -d feature/nome-da-feature
-git push origin --delete feature/nome-da-feature
+git branch -d feature/nome-da-feature         # Deleta localmente
+git push origin --delete feature/nome-da-feature  # Deleta no GitHub
 ```
 
 ---
+Aqui está um **template de Pull Request** profissional e adaptável para equipes que seguem boas práticas de versionamento:
+
+---
+
+### 📄 `.github/pull_request_template.md`
+
+```markdown
+## 🚀 Descrição
+
+<!-- Descreva de forma objetiva o que essa PR faz -->
+
+## 📝 Checklist
+
+- [ ] Código testado localmente
+- [ ] Cobertura de testes adequada
+- [ ] Documentação atualizada (se necessário)
+- [ ] Sem arquivos desnecessários incluídos
+
+## 🧪 Como testar
+
+<!-- Explique como validar as alterações. Ex: comandos, rota da API, comportamento esperado -->
+
+## 🧩 Tipo de mudança
+
+Marque com `x` o que se aplica:
+
+- [ ] Nova funcionalidade (`feat`)
+- [ ] Correção de bug (`fix`)
+- [ ] Refatoração (`refactor`)
+- [ ] Atualização de documentação (`docs`)
+- [ ] Outro: __________________________
+
+## 📎 Tarefa relacionada (opcional)
+
+<!-- Ex: Jira, Trello ou GitHub Issues -->
+Closes #123
+
+## 🗒️ Notas adicionais
+
+<!-- Alguma dependência, contexto ou impacto a considerar? -->
+```
+
+---
+
+📌 **Como usar:**
+
+1. Crie a pasta `.github/` na raiz do seu projeto (se não existir).
+2. Crie o arquivo `pull_request_template.md` dentro dela.
+3. O GitHub aplicará automaticamente esse modelo sempre que alguém abrir um PR.
+
+Se quiser um exemplo real preenchido ou um [template adaptado para projetos solo](f), posso montar também.
 
